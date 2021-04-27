@@ -1,0 +1,27 @@
+header {
+    grid-column: 1/15;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 8rem;
+
+    img {
+        height: 3rem;
+    }
+
+    button {
+        @include color($dark-blue);
+        display: flex;
+        justify-content: center;
+        padding: .75rem 2rem;
+        border: 2px solid $light-color;
+        border-radius: .5rem;
+
+        &:hover {
+            background-color: $light-color;
+            color: $dark-blue;
+            border: 2px solid $dark-blue;
+        }
+    }
+}

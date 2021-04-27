@@ -1,0 +1,30 @@
+.message {
+    @include color($red);
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    border-radius: .75rem;
+
+    .meta {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: .5rem;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: capitalize;
+
+        span {
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: none;
+        }
+    }
+
+    /*
+    <p class="meta">${this.state.message[i].pseudo} 
+        <span>${this.state.message[i].date_heure}</span>
+    </p>
+    <p class="text">
+        ${this.state.message[i].texte}
+    </p>
+    */
+}

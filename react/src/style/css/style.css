@@ -1,0 +1,346 @@
+/* ============ */
+/*    MIXINS    */
+/* ============ */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 16px;
+}
+
+label {
+  font-size: 18px;
+}
+
+input, input::placeholder {
+  font-size: 16px;
+}
+
+select, option {
+  font-size: 14px;
+}
+
+button {
+  font-size: 18px;
+  padding: 0.5rem 1.5rem;
+  border: 0;
+}
+
+/* =========== */
+/*   GENERAL   */
+/* =========== */
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #011e2a;
+  color: #fff;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: 5rem auto;
+  column-gap: 0;
+  row-gap: 0;
+  padding: 0;
+  grid-auto-columns: 0;
+  grid-auto-rows: 0;
+  min-height: 100%;
+}
+
+p, h1, h2, h3, h4, ul, li, a {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  padding-block-start: 0;
+  padding-block-end: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  grid-column: 1/15;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 8rem;
+}
+header img {
+  height: 3rem;
+}
+header button {
+  background-color: #002D40;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  border: 2px solid #D9ECF2;
+  border-radius: 0.5rem;
+}
+header button:hover {
+  background-color: #D9ECF2;
+  color: #002D40;
+  border: 2px solid #002D40;
+}
+
+nav {
+  background-color: #1AA6B7;
+  color: #fff;
+  grid-column: 1/3;
+  grid-row: 2/3;
+  width: auto;
+  height: 715px;
+  padding: 4rem 1.5rem;
+  border-right: 5px solid #002D40;
+}
+@media screen and (min-height: 960px) {
+  nav {
+    height: 888px;
+  }
+}
+nav p {
+  font-size: 18px;
+}
+nav .roomName {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid #D9ECF2;
+}
+nav .roomName img {
+  width: 3.5rem;
+  height: auto;
+  margin-bottom: 1rem;
+}
+nav .roomName p {
+  margin-top: 0.5rem;
+  transform: translateX(-10px);
+}
+nav .usersChannel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+nav .usersChannel h3 {
+  margin-bottom: 1rem;
+}
+nav .usersChannel img {
+  width: 20px;
+  height: auto;
+}
+nav .usersChannel li {
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+.mainChat {
+  background-color: #fff;
+  color: #011e2a;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: auto 5.5rem;
+  column-gap: 0;
+  row-gap: 0;
+  padding: 0;
+  grid-auto-columns: 0;
+  grid-auto-rows: 0;
+  grid-column: 3/15;
+  grid-row: 2/3;
+  height: 715px;
+}
+@media screen and (min-height: 960px) {
+  .mainChat {
+    height: 888px;
+  }
+}
+.mainChat .displayMsg {
+  grid-column: 1/11;
+  grid-row: 1/2;
+  height: 100%;
+  padding: 2.5rem;
+  overflow-y: scroll;
+}
+.mainChat form {
+  grid-column: 1/11;
+  grid-row: 2/3;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+}
+.mainChat form input {
+  width: 100%;
+  height: 3.5rem;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #002D40;
+  border-radius: 0.5rem;
+}
+.mainChat form button {
+  background-color: #1AA6B7;
+  color: #fff;
+  width: auto;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+}
+.mainChat form button img {
+  width: 1.5rem;
+  height: auto;
+  margin-right: 1rem;
+}
+.mainChat form button p {
+  font-size: 18px;
+}
+
+.mainConnect {
+  background-color: #011e2a;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: auto;
+  column-gap: 0;
+  row-gap: 0;
+  padding: 0;
+  grid-auto-columns: 0;
+  grid-auto-rows: 0;
+  grid-column: 1/15;
+  grid-row: 1/3;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+.mainConnect form {
+  background-color: #1AA6B7;
+  color: #fff;
+  grid-column: 1/15;
+  grid-row: 1/2;
+  width: 36rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  margin: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0px 10px 15px #00638c;
+}
+.mainConnect form .divLogo {
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #fff;
+}
+.mainConnect form .divLogo img {
+  width: auto;
+  height: 4rem;
+}
+.mainConnect form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.mainConnect form div label {
+  margin-bottom: 0.5rem;
+}
+.mainConnect form div input, .mainConnect form div select {
+  width: 100%;
+  height: auto;
+  padding: 0.5rem 1rem;
+  border: 2px solid #011e2a;
+  border-radius: 0.5rem;
+}
+.mainConnect form div button {
+  background-color: #002D40;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  margin: 1rem auto 0 auto;
+  border: 2px solid #002D40;
+  border-radius: 0.5rem;
+}
+.mainConnect form div button:hover {
+  background-color: #D9ECF2;
+  color: #002D40;
+  border: 2px solid #002D40;
+}
+.mainConnect form hr {
+  width: 80%;
+  border: 1px solid #fff;
+}
+.mainConnect form .createRoom {
+  margin: 2rem 0 0 0;
+}
+
+.message {
+  background-color: #FF414D;
+  color: #fff;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  /*
+  <p class="meta">${this.state.message[i].pseudo} 
+      <span>${this.state.message[i].date_heure}</span>
+  </p>
+  <p class="text">
+      ${this.state.message[i].texte}
+  </p>
+  */
+}
+.message .meta {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.message .meta span {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+/*# sourceMappingURL=style.css.map */

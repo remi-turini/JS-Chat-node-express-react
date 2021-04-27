@@ -1,0 +1,56 @@
+nav {
+    @include color($blue);
+    grid-column: 1/3;
+    grid-row: 2/3;
+    width: auto;
+    height: 715px; //745
+    padding: 4rem 1.5rem;
+    border-right: 5px solid $dark-blue;
+
+    @media screen and (min-height: 960px) { height: 888px }
+
+    p { font-size: 18px }
+
+    .roomName {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 1.5rem;
+        margin-bottom: 3rem;
+        border-bottom: 2px solid $light-color;
+
+        img {
+            width: 3.5rem;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-top: .5rem;
+            transform: translateX(-10px);
+        }
+    }
+
+    .usersChannel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        h3 { margin-bottom: 1rem; }
+
+        img {
+            width: 20px;
+            height: auto;
+        }
+
+        li { 
+            text-align: center; 
+            text-transform: capitalize;
+            margin-bottom: .5rem;
+        }
+    }
+
+}

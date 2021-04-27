@@ -1,0 +1,26 @@
+h1 { font-size: 48px }
+h2 { font-size: 36px }
+h3 { font-size: 24px }
+h4 { font-size: 18px }
+
+p {
+  font-size: 16px;
+}
+
+label {
+  font-size: 18px;
+}
+
+input, input::placeholder {
+  font-size: 16px;
+}
+
+select, option {
+  font-size: 14px;
+}
+
+button {
+  font-size: 18px;
+  padding: .5rem 1.5rem;
+  border: 0;
+}

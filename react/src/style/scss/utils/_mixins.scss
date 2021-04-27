@@ -1,0 +1,58 @@
+/* ============ */
+/*    MIXINS    */
+/* ============ */
+
+@mixin gridBody($grid-template-rows: 5rem auto, $column-gap: 0, $row-gap: 0) {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr) ;
+  grid-template-rows: $grid-template-rows;
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+  padding: 0;
+  grid-auto-columns: 0;
+  grid-auto-rows: 0;
+}
+
+@mixin gridMain($grid-template-rows: 5rem auto, $padding: 0) {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr) ;
+  grid-template-rows: $grid-template-rows;
+  column-gap: 0;
+  row-gap: 0;
+  padding: $padding;
+  grid-auto-columns: 0;
+  grid-auto-rows: 0;
+}
+
+@mixin gridMsg($padding: 0) {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr) ;
+  grid-template-rows: auto auto;
+  column-gap: 2rem;
+  row-gap: 1rem;
+  padding: $padding;
+  grid-auto-columns: 0;
+  grid-auto-rows: 0;
+}
+
+// COLOR OF TEXT (couleur de texte en fonction du background)
+@mixin color($background-color) { // Dans header ou main ou section ou footer
+  @if $background-color == $dark-color {
+    background-color: $dark-color;
+    color: $white;
+  } @else if $background-color == $dark-blue {
+    background-color: $dark-blue;
+    color: $white;
+  } @else if $background-color == $blue {
+    background-color: $blue;
+    color: $white;
+   } @else if $background-color == $red {
+    background-color: $red;
+    color: $white;
+  } @else if $background-color == $white {
+    background-color: $white;
+    color: $dark-color;
+  } @else {
+    p { color: red; }
+  }
+}
